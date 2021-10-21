@@ -7,7 +7,7 @@ import paramiko  # pip install paramiko
 import re
 
 
-def commandExec(hostname, username, password, service):
+def check_service(hostname, username, password, service):
 
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -30,3 +30,13 @@ def commandExec(hostname, username, password, service):
 
     except:
         print("Could not connect to the Server!")
+
+
+if __name__ == "__main__":
+    # change parameters here
+    hostname = "your-ip"
+    username = "username"
+    password = "secret"
+    service = "hhtpd"
+
+    check_service(hostname, username, password, service)
