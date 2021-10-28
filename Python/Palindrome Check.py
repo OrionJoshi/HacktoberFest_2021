@@ -1,3 +1,4 @@
+#Program to check whether a number is Palindrome or not.
 # Method: Using pointers
 
 def isPalindrome(string):
